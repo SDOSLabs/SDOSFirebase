@@ -1,4 +1,4 @@
-## HEAD
+## [2.0.1 Remove Firebase/Core version](https://github.com/SDOSLabs/SDOSFirebase/tree/v2.0.1)
 
 - Remove Firebase/Core version lock in podspec
 
