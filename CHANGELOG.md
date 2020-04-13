@@ -1,3 +1,7 @@
+## [2.0.1 Remove Firebase/Core version](https://github.com/SDOSLabs/SDOSFirebase/tree/v2.0.1)
+
+- Remove Firebase/Core version lock in podspec
+
 ## [2.0.0 Arreglo al incluir la dependencia en un Framework](https://github.com/SDOSLabs/SDOSFirebase/tree/v2.0.0)
 
 - Cambios en la librería para corregir un error de instancia única cuando se incluia en un Framework.

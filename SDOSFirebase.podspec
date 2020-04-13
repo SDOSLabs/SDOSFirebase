@@ -1,4 +1,4 @@
-@version = "2.0.0"
+@version = "2.0.1"
 Pod::Spec.new do |spec|
   spec.platform     = :ios, '9.0'
   spec.name         = 'SDOSFirebase'
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
     s2.source_files = ['src/Classes/*{*.m,*.h,*.swift}', 'src/Classes/**/*{*.m,*.h,*.swift}']
   end
 
-  spec.dependency 'Firebase/Core', '~> 5.4'
+  spec.dependency 'Firebase/Core'
   spec.static_framework = true
 
 end

@@ -29,7 +29,7 @@ La librería se encarga de leer un fichero .plist con la asociación de los View
 Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
 
 ```ruby
-pod 'SDOSFirebase', '~>2.0.0' 
+pod 'SDOSFirebase', '~>2.0.1' 
 ```
 
 ## Cómo se usa
@@ -149,7 +149,7 @@ let screenName = SDOSFirebase.getScreenName(forClass: type(of: self))
     ```
 
 ## Dependencias
-* [Firebase/Core](https://cocoapods.org/pods/Firebase) - 5.x
+* [Firebase/Core](https://cocoapods.org/pods/Firebase)
 
 ## Referencias
 * https://github.com/SDOSLabs/SDOSFirebase
