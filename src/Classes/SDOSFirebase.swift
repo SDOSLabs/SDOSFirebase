@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 import FirebaseAnalytics
 import FirebaseCore
 
@@ -25,7 +26,7 @@ public class SDOSFirebase {
     fileprivate static var screensPlistName = "FirebaseScreens" {
         didSet {
             guard let screensPlist = Bundle.main.path(forResource: screensPlistName, ofType: SDOSFirebaseScreenConfigType.plist.rawValue),
-                let screensDictionary = NSDictionary(contentsOfFile: screensPlist)
+                let _ = NSDictionary(contentsOfFile: screensPlist)
                 else {
                     print("[\(self)] - No se ha podido cargar el fichero de configuración de los nombres de pantallas de Firebase. Comprueba que el fichero \"\(screensPlistName).\(SDOSFirebaseScreenConfigType.plist.rawValue)\" existe")
                     return
@@ -81,7 +82,7 @@ public class SDOSFirebase {
             return
         }
         guard !configurationLoaded else {
-            fatalError("[\(self)] - No se puede volver a cargar la configuración de Firebase una vez que ya ha sido inicializada")
+            assertionFailure("[\(self)] - No se puede volver a cargar la configuración de Firebase una vez que ya ha sido inicializada")
             return
         }
         FirebaseApp.configure(options: options)
@@ -159,6 +160,8 @@ public class SDOSFirebase {
     }
     
     private static func setScreenAnalytic(name: String?, screenClassName: String?) {
+        //[FIRAnalytics logEventWithName:kFIREventScreenView parameters:]
+        
         Analytics.setScreenName(name, screenClass: screenClassName)
     }
 }

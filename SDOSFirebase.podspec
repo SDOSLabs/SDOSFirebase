@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
     s2.source_files = ['src/Classes/*{*.m,*.h,*.swift}', 'src/Classes/**/*{*.m,*.h,*.swift}']
   end
 
-  spec.dependency 'Firebase/Core'
+  spec.dependency 'Firebase/Core', '>= 6.10'
   spec.static_framework = true
 
 end
