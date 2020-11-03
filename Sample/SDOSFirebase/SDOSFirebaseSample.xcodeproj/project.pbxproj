@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26FF1E3023758682C45F4C33 /* Pods_SDOSFirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6F8A37916009F1EDECC845 /* Pods_SDOSFirebaseSample.framework */; };
 		292500C4221A995500601568 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292500C2221A995500601568 /* DocumentationViewController.swift */; };
 		292500C5221A995500601568 /* DocumentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292500C3221A995500601568 /* DocumentationViewController.xib */; };
 		292500C8221AA2A000601568 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292500C7221AA2A000601568 /* Constants.swift */; };
@@ -14,15 +15,29 @@
 		293EE47222043BF500A592DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46C22043BF500A592DD /* Assets.xcassets */; };
 		293EE47322043BF500A592DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46D22043BF500A592DD /* LaunchScreen.storyboard */; };
 		293EE4A8220440C600A592DD /* BuilderCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EE4A6220440C600A592DD /* BuilderCommon.swift */; };
+		2992E9D125386ABA00322094 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292500C7221AA2A000601568 /* Constants.swift */; };
+		2992E9D225386ABA00322094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EE46322043B9300A592DD /* AppDelegate.swift */; };
+		2992E9D325386ABA00322094 /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292500C2221A995500601568 /* DocumentationViewController.swift */; };
+		2992E9D425386ABA00322094 /* VIPERBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF621220C4E7D00FB3D4C /* VIPERBaseClass.swift */; };
+		2992E9D525386ABA00322094 /* VIPERBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF623220C4EE600FB3D4C /* VIPERBaseProtocol.swift */; };
+		2992E9D625386ABA00322094 /* BuilderCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EE4A6220440C600A592DD /* BuilderCommon.swift */; };
+		2992E9DA25386ABA00322094 /* DocumentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292500C3221A995500601568 /* DocumentationViewController.xib */; };
+		2992E9DB25386ABA00322094 /* FirebaseScreens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6F224A2B7800F4CA84 /* FirebaseScreens.plist */; };
+		2992E9DC25386ABA00322094 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6B224A1AE800F4CA84 /* GoogleService-Info-Debug.plist */; };
+		2992E9DD25386ABA00322094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6C224A1AE800F4CA84 /* GoogleService-Info.plist */; };
+		2992E9DE25386ABA00322094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46C22043BF500A592DD /* Assets.xcassets */; };
+		2992E9DF25386ABA00322094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46D22043BF500A592DD /* LaunchScreen.storyboard */; };
+		2992E9F825386F7E00322094 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2992E9F725386F7E00322094 /* SwiftPackageProductDependency */; };
 		299FF622220C4E7D00FB3D4C /* VIPERBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF621220C4E7D00FB3D4C /* VIPERBaseClass.swift */; };
 		299FF624220C4EE600FB3D4C /* VIPERBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF623220C4EE600FB3D4C /* VIPERBaseProtocol.swift */; };
 		29AC7B6D224A1AE800F4CA84 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6B224A1AE800F4CA84 /* GoogleService-Info-Debug.plist */; };
 		29AC7B6E224A1AE800F4CA84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6C224A1AE800F4CA84 /* GoogleService-Info.plist */; };
 		29AC7B70224A2B7800F4CA84 /* FirebaseScreens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6F224A2B7800F4CA84 /* FirebaseScreens.plist */; };
-		64E4A90EA5C8BAFFDB51B3FE /* Pods_SDOSFirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4063FAE9693F33A7E67F290F /* Pods_SDOSFirebaseSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085F7C2B7C8EAF281135C5BE /* Pods-SDOSFirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSFirebaseSample.debug.xcconfig"; path = "Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
+		0A6F8A37916009F1EDECC845 /* Pods_SDOSFirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDOSFirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		292500C2221A995500601568 /* DocumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
 		292500C3221A995500601568 /* DocumentationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentationViewController.xib; sourceTree = "<group>"; };
 		292500C7221AA2A000601568 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -33,17 +48,16 @@
 		293EE46E22043BF500A592DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293EE47122043BF500A592DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		293EE4A6220440C600A592DD /* BuilderCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderCommon.swift; sourceTree = "<group>"; };
+		2992E9E525386ABA00322094 /* SDOSFirebaseSample-SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDOSFirebaseSample-SPM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		299FF621220C4E7D00FB3D4C /* VIPERBaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERBaseClass.swift; sourceTree = "<group>"; };
 		299FF623220C4EE600FB3D4C /* VIPERBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERBaseProtocol.swift; sourceTree = "<group>"; };
 		29AC7B68224A196100F4CA84 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		29AC7B69224A196100F4CA84 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
-		29AC7B6A224A196100F4CA84 /* SDOSFirebase.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SDOSFirebase.podspec; path = ../../SDOSFirebase.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		29AC7B6A224A196100F4CA84 /* SDOSFirebase.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SDOSFirebase.podspec; path = ../../SDOSFirebase.podspec; sourceTree = "<group>"; };
 		29AC7B6B224A1AE800F4CA84 /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		29AC7B6C224A1AE800F4CA84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		29AC7B6F224A2B7800F4CA84 /* FirebaseScreens.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseScreens.plist; sourceTree = "<group>"; };
-		33B984E569F9C3154E850DFA /* Pods-SDOSFirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSFirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
-		4063FAE9693F33A7E67F290F /* Pods_SDOSFirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDOSFirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78607F633B926D5D96E4F50F /* Pods-SDOSFirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSFirebaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7A514A1D20898C88AD5DABF1 /* Pods-SDOSFirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSFirebaseSample.release.xcconfig"; path = "Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +65,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E4A90EA5C8BAFFDB51B3FE /* Pods_SDOSFirebaseSample.framework in Frameworks */,
+				26FF1E3023758682C45F4C33 /* Pods_SDOSFirebaseSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2992E9D725386ABA00322094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2992E9F825386F7E00322094 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +114,8 @@
 				293EE45C22043B9300A592DD /* app */,
 				292500CD221AC79800601568 /* podspec */,
 				293EE44822043A3800A592DD /* Products */,
-				7100306122A20B8B7D534EFF /* Pods */,
-				894C201034D9558632E34FEE /* Frameworks */,
+				AA6661F73C61C5B993DF22D2 /* Pods */,
+				48BEAD7A77C7F2AEFC71A879 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				293EE44722043A3800A592DD /* SDOSFirebaseSample.app */,
+				2992E9E525386ABA00322094 /* SDOSFirebaseSample-SPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,21 +291,21 @@
 			path = interactor;
 			sourceTree = "<group>";
 		};
-		7100306122A20B8B7D534EFF /* Pods */ = {
+		48BEAD7A77C7F2AEFC71A879 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				78607F633B926D5D96E4F50F /* Pods-SDOSFirebaseSample.debug.xcconfig */,
-				33B984E569F9C3154E850DFA /* Pods-SDOSFirebaseSample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		894C201034D9558632E34FEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4063FAE9693F33A7E67F290F /* Pods_SDOSFirebaseSample.framework */,
+				0A6F8A37916009F1EDECC845 /* Pods_SDOSFirebaseSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA6661F73C61C5B993DF22D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				085F7C2B7C8EAF281135C5BE /* Pods-SDOSFirebaseSample.debug.xcconfig */,
+				7A514A1D20898C88AD5DABF1 /* Pods-SDOSFirebaseSample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 293EE45922043A3900A592DD /* Build configuration list for PBXNativeTarget "SDOSFirebaseSample" */;
 			buildPhases = (
-				CB771CDC2438CFC44CA17C6B /* [CP] Check Pods Manifest.lock */,
+				40CB1D543FB1B780930084D9 /* [CP] Check Pods Manifest.lock */,
 				293EE44322043A3800A592DD /* Sources */,
 				293EE44422043A3800A592DD /* Frameworks */,
 				293EE44522043A3800A592DD /* Resources */,
 				2996F1632220173B006295AC /* XcodeVersion */,
-				6B653B21869A1CC575952932 /* [CP] Embed Pods Frameworks */,
+				761A4A3438E94AF5AF680552 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +329,27 @@
 			name = SDOSFirebaseSample;
 			productName = SDOSVIPER;
 			productReference = 293EE44722043A3800A592DD /* SDOSFirebaseSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2992E9CE25386ABA00322094 /* SDOSFirebaseSample-SPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2992E9E225386ABA00322094 /* Build configuration list for PBXNativeTarget "SDOSFirebaseSample-SPM" */;
+			buildPhases = (
+				2992E9D025386ABA00322094 /* Sources */,
+				2992E9D725386ABA00322094 /* Frameworks */,
+				2992E9D925386ABA00322094 /* Resources */,
+				2992E9E025386ABA00322094 /* XcodeVersion */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDOSFirebaseSample-SPM";
+			packageProductDependencies = (
+				2992E9F725386F7E00322094 /* SwiftPackageProductDependency */,
+			);
+			productName = SDOSVIPER;
+			productReference = 2992E9E525386ABA00322094 /* SDOSFirebaseSample-SPM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -338,6 +382,7 @@
 			projectRoot = "";
 			targets = (
 				293EE44622043A3800A592DD /* SDOSFirebaseSample */,
+				2992E9CE25386ABA00322094 /* SDOSFirebaseSample-SPM */,
 			);
 		};
 /* End PBXProject section */
@@ -356,9 +401,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2992E9D925386ABA00322094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2992E9DA25386ABA00322094 /* DocumentationViewController.xib in Resources */,
+				2992E9DB25386ABA00322094 /* FirebaseScreens.plist in Resources */,
+				2992E9DC25386ABA00322094 /* GoogleService-Info-Debug.plist in Resources */,
+				2992E9DD25386ABA00322094 /* GoogleService-Info.plist in Resources */,
+				2992E9DE25386ABA00322094 /* Assets.xcassets in Resources */,
+				2992E9DF25386ABA00322094 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2992E9E025386ABA00322094 /* XcodeVersion */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = XcodeVersion;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "file=\"$SRCROOT/XcodeVersion.properties\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nelif ([ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ] || [ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ])\nthen\necho \"error: [SDOS error] - The required version of Xcode to run this project is ${XCODE_VERSION_MINOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MINOR}. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nerror 0\nelif ([ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: [SDOS warning] - XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
+		};
 		2996F1632220173B006295AC /* XcodeVersion */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,24 +453,7 @@
 			shellPath = /bin/sh;
 			shellScript = "file=\"$SRCROOT/XcodeVersion.properties\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nelif ([ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ] || [ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ])\nthen\necho \"error: [SDOS error] - The required version of Xcode to run this project is ${XCODE_VERSION_MINOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MINOR}. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nerror 0\nelif ([ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: [SDOS warning] - XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
 		};
-		6B653B21869A1CC575952932 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB771CDC2438CFC44CA17C6B /* [CP] Check Pods Manifest.lock */ = {
+		40CB1D543FB1B780930084D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,6 +475,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		761A4A3438E94AF5AF680552 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDOSFirebaseSample/Pods-SDOSFirebaseSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -429,6 +505,19 @@
 				299FF622220C4E7D00FB3D4C /* VIPERBaseClass.swift in Sources */,
 				299FF624220C4EE600FB3D4C /* VIPERBaseProtocol.swift in Sources */,
 				293EE4A8220440C600A592DD /* BuilderCommon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2992E9D025386ABA00322094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2992E9D125386ABA00322094 /* Constants.swift in Sources */,
+				2992E9D225386ABA00322094 /* AppDelegate.swift in Sources */,
+				2992E9D325386ABA00322094 /* DocumentationViewController.swift in Sources */,
+				2992E9D425386ABA00322094 /* VIPERBaseClass.swift in Sources */,
+				2992E9D525386ABA00322094 /* VIPERBaseProtocol.swift in Sources */,
+				2992E9D625386ABA00322094 /* BuilderCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,13 +653,14 @@
 		};
 		293EE45A22043A3900A592DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78607F633B926D5D96E4F50F /* Pods-SDOSFirebaseSample.debug.xcconfig */;
+			baseConfigurationReference = 085F7C2B7C8EAF281135C5BE /* Pods-SDOSFirebaseSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = app/configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,18 +677,66 @@
 		};
 		293EE45B22043A3900A592DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B984E569F9C3154E850DFA /* Pods-SDOSFirebaseSample.release.xcconfig */;
+			baseConfigurationReference = 7A514A1D20898C88AD5DABF1 /* Pods-SDOSFirebaseSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = app/configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2992E9E325386ABA00322094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = app/configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2992E9E425386ABA00322094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = app/configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -628,7 +766,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2992E9E225386ABA00322094 /* Build configuration list for PBXNativeTarget "SDOSFirebaseSample-SPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2992E9E325386ABA00322094 /* Debug */,
+				2992E9E425386ABA00322094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2992E9F725386F7E00322094 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SDOSFirebase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 293EE43F22043A3800A592DD /* Project object */;
 }

@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 import FirebaseAnalytics
 import FirebaseCore
 
@@ -22,18 +23,7 @@ public class SDOSFirebase {
     public static let fileConfigurationExtension = SDOSFirebaseConfigType.plist
     
     fileprivate static var configurationLoaded = false
-    fileprivate static var screensPlistName = "FirebaseScreens" {
-        didSet {
-            guard let screensPlist = Bundle.main.path(forResource: screensPlistName, ofType: SDOSFirebaseScreenConfigType.plist.rawValue),
-                let screensDictionary = NSDictionary(contentsOfFile: screensPlist)
-                else {
-                    print("[\(self)] - No se ha podido cargar el fichero de configuración de los nombres de pantallas de Firebase. Comprueba que el fichero \"\(screensPlistName).\(SDOSFirebaseScreenConfigType.plist.rawValue)\" existe")
-                    return
-            }
-            self.screensDictionary = NSDictionary(contentsOfFile: screensPlist)
-            print("[\(self)] - Fichero \"\(screensPlistName).\(SDOSFirebaseScreenConfigType.plist.rawValue)\" cargado correctamente")
-        }
-    }
+    fileprivate static var screensPlistName = screensPlistNameDefault
     fileprivate static var screensDictionary: NSDictionary?
     
     
@@ -43,13 +33,14 @@ public class SDOSFirebase {
     ///   - environment: Entorno de ejecución. Este String se usará para formar el nombre completo del fichero a cargar. El fichero a buscar será: fileName-environment.fileExtension (Ejemplo: GoogleService-Info-Debug.plist)
     ///   - fileName: Nombre del fichero de configuración sin la extensión. Default: GoogleService-Info
     ///   - fileExtension: Extensión del fichero de configuración. Default: plist
-    ///   - bundle: Paquete donde se buscará el fichero de configuración: Default: Bundle.main
+    ///   - configBundle: Paquete donde se buscará el fichero de configuración: Default: Bundle.main
     ///   - screensPlist: Nombre del fichero que contiene la asociación de nombres de las pantallas que se setearan en firebase
+    ///   - screensBundle: Paquete donde se buscará el fichero definido en el parámetro screensPlist: Default: Bundle.main
     /// - Returns: Objeto options con la configuración del fichero. Devuelve nil si no se encuentra el fichero de configuración
-    public static func options(environment: String, fileName: String = fileConfigurationName, fileExtension: SDOSFirebaseConfigType = fileConfigurationExtension, bundle: Bundle = Bundle.main, screensPlist: String = screensPlistNameDefault) -> FirebaseOptions? {
+    public static func options(environment: String, fileName: String = fileConfigurationName, fileExtension: SDOSFirebaseConfigType = fileConfigurationExtension, configBundle: Bundle = Bundle.main, screensPlist: String = screensPlistNameDefault, screensBundle: Bundle = Bundle.main) -> FirebaseOptions? {
         self.screensPlistName = screensPlist
         let completeName = "\(fileName)-\(environment)"
-        return options(fileName: completeName, fileExtension: fileExtension, bundle: bundle, screensPlist: screensPlist)
+        return options(fileName: completeName, fileExtension: fileExtension, configBundle: configBundle, screensPlist: screensPlist, screensBundle: screensBundle)
     }
     
     /// Recupera la configuración para enviar a Firebase a partir del fichero de configuración indicado
@@ -57,12 +48,21 @@ public class SDOSFirebase {
     /// - Parameters:
     ///   - fileName: Nombre del fichero de configuración sin la extensión. Default: GoogleService-Info
     ///   - fileExtension: Extensión del fichero de configuración. Default: plist
-    ///   - bundle: Paquete donde se buscará el fichero de configuración: Default: Bundle.main
+    ///   - configBundle: Paquete donde se buscará el fichero de configuración: Default: Bundle.main
     ///   - screensPlist: Nombre del fichero que contiene la asociación de nombres de las pantallas que se setearan en firebase
+    ///   - screensBundle: Paquete donde se buscará el fichero definido en el parámetro screensPlist: Default: Bundle.main
     /// - Returns: Objeto options con la configuración del fichero. Devuelve nil si no se encuentra el fichero de configuración
-    public static func options(fileName: String = fileConfigurationName, fileExtension: SDOSFirebaseConfigType = fileConfigurationExtension, bundle: Bundle = Bundle.main, screensPlist: String = screensPlistNameDefault) -> FirebaseOptions? {
+    public static func options(fileName: String = fileConfigurationName, fileExtension: SDOSFirebaseConfigType = fileConfigurationExtension, configBundle: Bundle = Bundle.main, screensPlist: String = screensPlistNameDefault, screensBundle: Bundle = Bundle.main) -> FirebaseOptions? {
         self.screensPlistName = screensPlist
-        guard let firebasePlist = bundle.path(forResource: fileName, ofType: fileExtension.rawValue),
+        if let screensPlist = screensBundle.path(forResource: screensPlistName, ofType: SDOSFirebaseScreenConfigType.plist.rawValue),
+           let _ = NSDictionary(contentsOfFile: screensPlist) {
+            self.screensDictionary = NSDictionary(contentsOfFile: screensPlist)
+            print("[\(self)] - Fichero \"\(screensPlistName).\(SDOSFirebaseScreenConfigType.plist.rawValue)\" cargado correctamente")
+        } else {
+            print("[\(self)] - No se ha podido cargar el fichero de configuración de los nombres de pantallas de Firebase. Comprueba que el fichero \"\(screensPlistName).\(SDOSFirebaseScreenConfigType.plist.rawValue)\" existe")
+        }
+        
+        guard let firebasePlist = configBundle.path(forResource: fileName, ofType: fileExtension.rawValue),
             let firebaseOptions = FirebaseOptions(contentsOfFile: firebasePlist)
             else {
                 print("[\(self)] - No se ha podido recuperar la configuración de Firebase. Comprueba que el fichero \"\(fileName).\(fileExtension.rawValue)\" existe")
@@ -81,7 +81,7 @@ public class SDOSFirebase {
             return
         }
         guard !configurationLoaded else {
-            fatalError("[\(self)] - No se puede volver a cargar la configuración de Firebase una vez que ya ha sido inicializada")
+            assertionFailure("[\(self)] - No se puede volver a cargar la configuración de Firebase una vez que ya ha sido inicializada")
             return
         }
         FirebaseApp.configure(options: options)
@@ -126,7 +126,7 @@ public class SDOSFirebase {
             return nil
         }
         
-        var screenName = screenInstance.firebaseScreenName?()
+        var screenName = screenInstance.firebaseScreenName()
         if screenName == nil {
             screenName = getScreenName(nil, forClass: type(of: screenInstance))
         }
@@ -159,7 +159,15 @@ public class SDOSFirebase {
     }
     
     private static func setScreenAnalytic(name: String?, screenClassName: String?) {
-        Analytics.setScreenName(name, screenClass: screenClassName)
+        var params = [String: String]()
+        if let name = name {
+            params[AnalyticsParameterScreenName] = name
+        }
+        if let screenClassName = screenClassName {
+            params[AnalyticsParameterScreenClass] = screenClassName
+        }
+        
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: params)
     }
 }
 
@@ -167,9 +175,17 @@ public class SDOSFirebase {
     /// Sobrescribe el nombre de la pantalla para marcar en Firebase
     ///
     /// - Returns: Nombre para marcar en Firebase
-    @objc optional func firebaseScreenName() -> String?
+    @objc func firebaseScreenName() -> String?
 }
 
-extension UIView: SDOSFirebaseScreen { }
+extension UIView: SDOSFirebaseScreen {
+    open func firebaseScreenName() -> String? {
+        return nil
+    }
+}
 
-extension UIViewController: SDOSFirebaseScreen { }
+extension UIViewController: SDOSFirebaseScreen {
+    open func firebaseScreenName() -> String? {
+        return nil
+    }
+}
