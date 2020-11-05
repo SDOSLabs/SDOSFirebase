@@ -1,4 +1,4 @@
-## [HEAD]
+## [3.0.0 Support Swift Package Manager](https://github.com/SDOSLabs/SDOSFirebase/tree/v3.0.0)
 
 - Add support for Swift Package Manager
 

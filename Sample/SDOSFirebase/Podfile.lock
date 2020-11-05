@@ -1,4 +1,6 @@
 PODS:
+  - Firebase/Analytics (7.0.0):
+    - Firebase/Core
   - Firebase/Core (7.0.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 7.0.0)
@@ -61,10 +63,10 @@ PODS:
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
   - SDOSFirebase (2.0.1):
-    - Firebase/Core (>= 7.0)
+    - Firebase/Analytics (~> 7.0)
     - SDOSFirebase/SDOSFirebase (= 2.0.1)
   - SDOSFirebase/SDOSFirebase (2.0.1):
-    - Firebase/Core (>= 7.0)
+    - Firebase/Analytics (~> 7.0)
 
 DEPENDENCIES:
   - SDOSFirebase (from `../../`)
@@ -97,7 +99,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ffb2f4159f2c897c6e8992bd7fbcdef8a300589c
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  SDOSFirebase: 527a474331b487c52ec78ed31cd4ddcc274490ab
+  SDOSFirebase: a3c7de37a037a55b25ea0da4a9cee411b64eb002
 
 PODFILE CHECKSUM: e114c18252e4e87d8c424fd40b65d107ea856b3b
 

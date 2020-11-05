@@ -27,7 +27,7 @@
 		2992E9DD25386ABA00322094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6C224A1AE800F4CA84 /* GoogleService-Info.plist */; };
 		2992E9DE25386ABA00322094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46C22043BF500A592DD /* Assets.xcassets */; };
 		2992E9DF25386ABA00322094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293EE46D22043BF500A592DD /* LaunchScreen.storyboard */; };
-		2992E9F825386F7E00322094 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2992E9F725386F7E00322094 /* SwiftPackageProductDependency */; };
+		2992E9F825386F7E00322094 /* SDOSFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 2992E9F725386F7E00322094 /* SDOSFirebase */; };
 		299FF622220C4E7D00FB3D4C /* VIPERBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF621220C4E7D00FB3D4C /* VIPERBaseClass.swift */; };
 		299FF624220C4EE600FB3D4C /* VIPERBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FF623220C4EE600FB3D4C /* VIPERBaseProtocol.swift */; };
 		29AC7B6D224A1AE800F4CA84 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29AC7B6B224A1AE800F4CA84 /* GoogleService-Info-Debug.plist */; };
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2992E9F825386F7E00322094 /* BuildFile in Frameworks */,
+				2992E9F825386F7E00322094 /* SDOSFirebase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +346,7 @@
 			);
 			name = "SDOSFirebaseSample-SPM";
 			packageProductDependencies = (
-				2992E9F725386F7E00322094 /* SwiftPackageProductDependency */,
+				2992E9F725386F7E00322094 /* SDOSFirebase */,
 			);
 			productName = SDOSVIPER;
 			productReference = 2992E9E525386ABA00322094 /* SDOSFirebaseSample-SPM.app */;
@@ -665,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -689,7 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -711,7 +711,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -735,7 +735,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -778,7 +778,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2992E9F725386F7E00322094 /* SwiftPackageProductDependency */ = {
+		2992E9F725386F7E00322094 /* SDOSFirebase */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SDOSFirebase;
 		};
