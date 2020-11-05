@@ -1,3 +1,7 @@
+## [3.0.0 Support Swift Package Manager](https://github.com/SDOSLabs/SDOSFirebase/tree/v3.0.0)
+
+- Add support for Swift Package Manager
+
 ## [2.0.1 Remove Firebase/Core version](https://github.com/SDOSLabs/SDOSFirebase/tree/v2.0.1)
 
 - Remove Firebase/Core version lock in podspec

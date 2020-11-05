@@ -1,13 +1,16 @@
 - [SDOSFirebase](#sdosfirebase)
-  - [Introducción](#introducci%c3%b3n)
-  - [Instalación](#instalaci%c3%b3n)
+  - [Introducción](#introducción)
+  - [Instalación](#instalación)
     - [Cocoapods](#cocoapods)
-  - [Cómo se usa](#c%c3%b3mo-se-usa)
-    - [Configuración del proyecto](#configuraci%c3%b3n-del-proyecto)
-    - [Implementación](#implementaci%c3%b3n)
-      - [Configuración inicial](#configuraci%c3%b3n-inicial)
+    - [Swift Package Manager](#swift-package-manager)
+      - [**En el "Project"**](#en-el-project)
+      - [**En un Package.swift**](#en-un-packageswift)
+  - [Cómo se usa](#cómo-se-usa)
+    - [Configuración del proyecto](#configuración-del-proyecto)
+    - [Implementación](#implementación)
+      - [Configuración inicial](#configuración-inicial)
       - [Uso](#uso)
-    - [Otros ejemplos de configuración](#otros-ejemplos-de-configuraci%c3%b3n)
+    - [Otros ejemplos de configuración](#otros-ejemplos-de-configuración)
   - [Dependencias](#dependencias)
   - [Referencias](#referencias)
 
@@ -26,10 +29,59 @@ La librería se encarga de leer un fichero .plist con la asociación de los View
 
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
+Usaremos [CocoaPods](https://cocoapods.org). 
+
+Añadir el "source" privado de SDOSLabs al `Podfile`. Añadir también el source público de cocoapods para poder seguir instalando dependencias desde éste:
+```ruby
+source 'https://github.com/SDOSLabs/cocoapods-specs.git' #SDOSLabs source
+source 'https://github.com/CocoaPods/Specs.git' #Cocoapods source
+```
+
+Añadir la dependencia al `Podfile`:
 
 ```ruby
-pod 'SDOSFirebase', '~>2.0.1' 
+pod 'SDOSFirebase', '~>3.0' 
+```
+
+### Swift Package Manager
+
+A partir de Xcode 12 podemos incluir esta librería a través de Swift package Manager. 
+
+Al incluir la librería con Swift Package Manager debemos ir al `Build Settings` del target, buscar la opción `Other Linker Flags` y añadir el valor `-ObjC`. Sin este paso la aplicación fallará al usar cualquier función de `Firebase`. Podéis consultar el [siguiente artículo](https://applecoding.com/tutoriales/firebase-instalacion-con-swift-package-manager-y-uso-en-swiftui-con-ios-14-y-xcode-12) donde explican como se añade la librería de Firebase a un proyecto.
+
+Existen 2 formas de añadir esta librería a un proyecto:
+
+#### **En el "Project"**
+
+Debemos abrir nuestro proyecto en Xcode y seleccionar el proyecto para abrir su configuración. Una vez aquí seleccionar la pestaña "Swift Packages" y añadir el siguiente repositorio
+
+```
+https://github.com/SDOSLabs/SDOSFirebase.git
+```
+
+En el siguiente paso deberemos seleccionar la versión que queremos instalar. Recomentamos indicar "Up to Next Major" `3.0.0`.
+
+Por último deberemos indicar el o los targets donde se deberá incluir la librería
+
+#### **En un Package.swift**
+
+Incluir la dependencia en el bloque `dependencies`:
+
+``` swift
+dependencies: [
+    .package(url: "https://github.com/SDOSLabs/SDOSFirebase.git", .upToNextMajor(from: "3.0.0"))
+]
+```
+
+Incluir la librería en el o los targets desados:
+
+```js
+.target(
+    name: "YourDependency",
+    dependencies: [
+        "SDOSFirebase"
+    ]
+)
 ```
 
 ## Cómo se usa
@@ -149,7 +201,7 @@ let screenName = SDOSFirebase.getScreenName(forClass: type(of: self))
     ```
 
 ## Dependencias
-* [Firebase/Core](https://cocoapods.org/pods/Firebase)
+* [Firebase/Analytics](https://github.com/firebase/firebase-ios-sdk) - ~> 7.0.0
 
 ## Referencias
 * https://github.com/SDOSLabs/SDOSFirebase
