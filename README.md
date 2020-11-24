@@ -84,6 +84,16 @@ Incluir la librería en el o los targets desados:
 )
 ```
 
+**IMPORTANTE**: Debido a problema con la instalación de Swift Package Manager hay que implantar la solución que indican en el siguiente enlace: https://github.com/firebase/firebase-ios-sdk/issues/6472#issuecomment-694449182.
+
+Hay que eliminar unos frameworks de Firebase que se incluyen en la carpeta Framework de la aplicación. Para ello hay que incluir el siguiente script en el apartado `Post-actions` del Build de todos los esquemas que usen la librería:
+```
+rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FirebaseAnalytics.framework"
+rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleAppMeasurement.framework"
+rm -rf "${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FIRAnalyticsConnector.framework"
+```
+![Post-actions](Screenshots/Post-actions.png)
+
 ## Cómo se usa
 
 ### Configuración del proyecto
