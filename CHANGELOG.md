@@ -1,3 +1,7 @@
+## [3.1.0 Update Firebase 11.9.0](https://github.com/SDOSLabs/SDOSFirebase/tree/v3.1.0)
+
+- Update Firebase dependency to 11.9.0
+
 ## [3.0.0 Support Swift Package Manager](https://github.com/SDOSLabs/SDOSFirebase/tree/v3.0.0)
 
 - Add support for Swift Package Manager

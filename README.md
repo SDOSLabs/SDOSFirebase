@@ -211,7 +211,7 @@ let screenName = SDOSFirebase.getScreenName(forClass: type(of: self))
     ```
 
 ## Dependencias
-* [Firebase/Analytics](https://github.com/firebase/firebase-ios-sdk) - ~> 7.0.0
+* [Firebase/Analytics](https://github.com/firebase/firebase-ios-sdk) - ~> 11.9.0
 
 ## Referencias
 * https://github.com/SDOSLabs/SDOSFirebase
